@@ -1,0 +1,105 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Main content styles */
+main {
+    margin-top: 80px;
+    flex-grow: 1;
+}
+
+#contact {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact h1 {
+    color: #007bff;
+}
+
+/* Form styles */
+#contact-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#contact-form button {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Contact details styles */
+#contact-details {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#contact-details h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#contact-details a {
+    color: #007bff;
+}
+
+/* Footer styles */
+footer {
+    margin-top: auto;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    header .hamburger {
+        display: block;
+    }
+    
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #007bff;
+        padding: 1rem;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+}   

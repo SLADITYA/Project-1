@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - JobSearch</title>
+    <link rel="stylesheet" href="about_us.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">JobSearch</div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="home.html" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="JobListing.html" class="nav-link text-white">Job Listings</a></li>
+                    <li class="nav-item"><a href="about_us.html" class="nav-link text-white">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link text-white">Contact</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link text-white">Login</a></li>
+                    <li class="nav-item"><a href="signup.html" class="nav-link text-white">SignUp</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger d-md-none">&#9776;</div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-us">
+            <h1>About Us</h1>
+            <p>Welcome to Innovate Solutions, where we are committed to transforming ideas into reality. Our mission is to provide cutting-edge technology solutions that drive business growth and improve everyday life. With a passion for innovation, we strive to deliver excellence and make a meaningful impact in the tech industry.</p>
+            <p>Founded in 2015, our journey began with a vision to revolutionize how technology integrates with businesses. Over the years, we have evolved into a leading provider of bespoke software and technology solutions, thanks to our dedicated team and the support of our valued clients. Our commitment to continuous improvement and customer satisfaction has been the cornerstone of our success.</p>
+        </section>
+
+        <section id="team">
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+                <div class="lead">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQac_2ND3WQ2aJ0dYplynyWqLjtxQdImuu4fA&s" alt="CEO Robert">
+                    <h3>Robert</h3>
+                    <p><strong>Position:</strong> CEO</p>
+                </div>
+                <div class="members">
+                    <div class="item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQac_2ND3WQ2aJ0dYplynyWqLjtxQdImuu4fA&s" alt="Team Member">
+                        <h3>John</h3>
+                        <p><strong>Position:</strong> CTO</p>
+                    </div>
+                    <div class="item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQac_2ND3WQ2aJ0dYplynyWqLjtxQdImuu4fA&s" alt="Team Member">
+                        <h3>Sarah</h3>
+                        <p><strong>Position:</strong> Lead Developer</p>
+                    </div>
+                    <div class="item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQac_2ND3WQ2aJ0dYplynyWqLjtxQdImuu4fA&s" alt="Team Member">
+                        <h3>Michael</h3>
+                        <p><strong>Position:</strong> UX Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JobSearch. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+});
+    </script>
+</body>
+</html>

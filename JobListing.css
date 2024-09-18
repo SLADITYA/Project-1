@@ -1,0 +1,262 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 56px; /* To prevent content from being hidden behind the fixed header */
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Jobs section */
+#jobs {
+    padding: 60px 0; /* Add padding to create space */
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+#jobs h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-container button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-container button:hover {
+    background-color: #0056b3;
+}
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.job-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 20px); /* Three columns layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.job-card p {
+    color: #666;
+}
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .job-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: calc(33% - 20px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .job-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #00e676);
+  }
+  
+  .job-card h3 {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .job-card .company {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .job-card .location,
+  .job-card .salary {
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .job-card .description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .job-card .requirements {
+    display: none;
+  }
+  
+  .job-card .apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+  }
+  
+  .job-card .apply-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .job-card.expanded {
+    width: calc(66% - 20px);
+  }
+  
+  .job-card.expanded .description {
+    -webkit-line-clamp: unset;
+  }
+  
+  .job-card.expanded .requirements {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .no-jobs {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 992px) {
+    .job-card,
+    .job-card.expanded {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .job-card,
+    .job-card.expanded {
+      width: 100%;
+    }
+  }
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px; /* To create space from the content */
+}
+
+/* Media queries for responsive design */
+
+ 
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+    #root {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job-card {
+        width: 90%; /* Full width on smaller screens */
+    }
+    nav {
+        width: 100%;
+        display: none; /* Hide the nav by default on small screens */
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger on small screens */
+    }
+}
